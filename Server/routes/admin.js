@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Post = require('../models/post');
+const Post = require('../models/Post');
 const User = require('../models/User');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
@@ -82,10 +82,10 @@ router.post('/admin', async (req, res) => {
  * GET /
  * Admin Dashboard
 */
-router.get('/dashboard', authMiddleware, async (req, res) => {
+router.get('/dashboard', async (req, res) => {
   try {
     const locals = {
-      title: 'Dashboard',
+      title: 'dashboard',
       description: 'Simple Blog created with NodeJs, Express & MongoDb.'
     }
 
@@ -107,7 +107,7 @@ router.get('/dashboard', authMiddleware, async (req, res) => {
  * GET /
  * Admin - Create New Post
 */
-router.get('/add-post', authMiddleware, async (req, res) => {
+router.get('/add-post', async (req, res) => {
   try {
     const locals = {
       title: 'Add Post',
@@ -131,7 +131,7 @@ router.get('/add-post', authMiddleware, async (req, res) => {
  * POST /
  * Admin - Create New Post
 */
-router.post('/add-post', authMiddleware, async (req, res) => {
+router.post('/add-post', async (req, res) => {
   try {
     try {
       const newPost = new Post({
@@ -155,7 +155,7 @@ router.post('/add-post', authMiddleware, async (req, res) => {
  * GET /
  * Admin - Create New Post
 */
-router.get('/edit-post/:id', authMiddleware, async (req, res) => {
+router.get('/edit-post/:id', async (req, res) => {
   try {
 
     const locals = {
@@ -182,7 +182,7 @@ router.get('/edit-post/:id', authMiddleware, async (req, res) => {
  * PUT /
  * Admin - Create New Post
 */
-router.put('/edit-post/:id', authMiddleware, async (req, res) => {
+router.put('/edit-post/:id', async (req, res) => {
   try {
 
     await Post.findByIdAndUpdate(req.params.id, {
@@ -200,20 +200,20 @@ router.put('/edit-post/:id', authMiddleware, async (req, res) => {
 });
 
 
-// router.post('/admin', async (req, res) => {
-//   try {
-//     const { username, password } = req.body;
+router.post('/admin', async (req, res) => {
+  try {
+    const { username, password } = req.body;
     
-//     if(req.body.username === 'admin' && req.body.password === 'password') {
-//       res.send('You are logged in.')
-//     } else {
-//       res.send('Wrong username or password');
-//     }
+    if(req.body.username === 'admin' && req.body.password === 'password') {
+      res.send('You are logged in.')
+    } else {
+      res.send('Wrong username or password');
+    }
 
-//   } catch (error) {
-//     console.log(error);
-//   }
-// });
+  } catch (error) {
+    console.log(error);
+  }
+});
 
 
 /**
@@ -245,7 +245,7 @@ router.post('/register', async (req, res) => {
  * DELETE /
  * Admin - Delete Post
 */
-router.delete('/delete-post/:id', authMiddleware, async (req, res) => {
+router.delete('/delete-post/:id', async (req, res) => {
 
   try {
     await Post.deleteOne( { _id: req.params.id } );

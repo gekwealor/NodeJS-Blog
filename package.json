@@ -22,6 +22,7 @@
     "express-session": "^1.18.0",
     "jsonwebtoken": "^9.0.2",
     "method-override": "^3.0.0",
+    "mongo-sanitize": "^1.1.0",
     "mongodb": "^6.5.0",
     "mongoose": "^8.3.2",
     "react-icons": "^5.1.0",

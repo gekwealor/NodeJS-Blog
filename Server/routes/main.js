@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Post = require('../models/post');
+const Post = require('../models/Post');
 
 /**
  * GET /
@@ -41,20 +41,20 @@ router.get('', async (req, res) => {
 
 });
 
-// router.get('', async (req, res) => {
-//   const locals = {
-//     title: "NodeJs Blog",
-//     description: "Simple Blog created with NodeJs, Express & MongoDb."
-//   }
+router.get('', async (req, res) => {
+  const locals = {
+    title: "NodeJs Blog",
+    description: "Simple Blog created with NodeJs, Express & MongoDb."
+  }
 
-//   try {
-//     const data = await Post.find();
-//     res.render('index', { locals, data });
-//   } catch (error) {
-//     console.log(error);
-//   }
+  try {
+    const data = await Post.find();
+    res.render('index', { locals, data });
+  } catch (error) {
+    console.log(error);
+  }
 
-// });
+});
 
 
 /**
@@ -129,52 +129,52 @@ router.get('/about', (req, res) => {
 });
 
 
-// function insertPostData () {
-//   Post.insertMany([
-//     {
-//       title: "Building APIs with Node.js",
-//       body: "Learn how to use Node.js to build RESTful APIs using frameworks like Express.js"
-//     },
-//     {
-//       title: "Deployment of Node.js applications",
-//       body: "Understand the different ways to deploy your Node.js applications, including on-premises, cloud, and container environments..."
-//     },
-//     {
-//       title: "Authentication and Authorization in Node.js",
-//       body: "Learn how to add authentication and authorization to your Node.js web applications using Passport.js or other authentication libraries."
-//     },
-//     {
-//       title: "Understand how to work with MongoDB and Mongoose",
-//       body: "Understand how to work with MongoDB and Mongoose, an Object Data Modeling (ODM) library, in Node.js applications."
-//     },
-//     {
-//       title: "build real-time, event-driven applications in Node.js",
-//       body: "Socket.io: Learn how to use Socket.io to build real-time, event-driven applications in Node.js."
-//     },
-//     {
-//       title: "Discover how to use Express.js",
-//       body: "Discover how to use Express.js, a popular Node.js web framework, to build web applications."
-//     },
-//     {
-//       title: "Asynchronous Programming with Node.js",
-//       body: "Asynchronous Programming with Node.js: Explore the asynchronous nature of Node.js and how it allows for non-blocking I/O operations."
-//     },
-//     {
-//       title: "Learn the basics of Node.js and its architecture",
-//       body: "Learn the basics of Node.js and its architecture, how it works, and why it is popular among developers."
-//     },
-//     {
-//       title: "NodeJs Limiting Network Traffic",
-//       body: "Learn how to limit network traffic."
-//     },
-//     {
-//       title: "Learn Morgan - HTTP Request logger for NodeJs",
-//       body: "Learn Morgan."
-//     },
-//   ])
-// }
+function insertPostData () {
+  Post.insertMany([
+    {
+      title: "Introduction to SQL",
+      body: "WE will be introducing two types of SQL. The MySQL and Postgres"
+    },
+    {
+      title: "How to pull datasets from different databases",
+      body: "Steps to querying pull and merge two or more data"
+    },
+    {
+      title: "Introduction to Python",
+      body: "How to download Anaconda and Jupiter Notebook."
+    },
+    {
+      title: "How to effectively use Python to transform data",
+      body: "Easy step by step ways to do so."
+    },
+    {
+      title: "Best Visualization tools",
+      body: "Introduction to Tableau and PowerBI as tools for visualization."
+    },
+    {
+      title: "Introduction to Tableau.",
+      body: "Use Tableau effectively."
+    },
+    {
+      title: "Introduction to PowerBI",
+      body: "Beginner to pro PowerBI session."
+    },
+    {
+      title: "How to answer technical questions for interview",
+      body: "Best practices to guarantee success for SQL interview ."
+    },
+    {
+      title: "Portfolio Website",
+      body: "Learn how to build your portfolio website."
+    },
+    {
+      title: "Work Life Balance",
+      body: "Learn the importance early and know your."
+    },
+  ])
+}
 
-// insertPostData();
+insertPostData();
 
 
 module.exports = router;

@@ -73,8 +73,8 @@ img {
   padding: 20px 0;
 }
 
-/* Hero Section */
-.hero-image {
+/* Seaside Section */
+.blog-image {
   max-height: 528px;
   filter: drop-shadow(0px 44px 34px rgba(0, 0, 0, 0.25));
   overflow: hidden;
@@ -296,7 +296,7 @@ img {
   padding: 10px 0;
 }
 
-/* SeachBar */
+/* SearchBar */
 .searchBar {
   visibility: hidden;
   transform: translateY(-100px);
