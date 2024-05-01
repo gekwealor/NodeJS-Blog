@@ -263,7 +263,7 @@ router.delete('/delete-post/:id', async (req, res) => {
 */
 router.get('/logout', (req, res) => {
   res.clearCookie('token');
-  //res.json({ message: 'Logout successful.'});
+  //res.json({ message: 'Logged out successfully.'});
   res.redirect('/');
 });
 
