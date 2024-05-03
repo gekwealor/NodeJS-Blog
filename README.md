@@ -1,10 +1,20 @@
-This is my final project. I used NodeJs, Express, EJS & MongoDB for this Blog.
+NodeJs, Express, EJS & MongoDB Blog - CRUD
 
-Express: Handling HTTP requests and routes.
-MongoDB: Database for storing and retrieving data.
-Middleware: Used for session management, form parsing.
-Route definition using Express.
-MongoDB integration for data operations.
-Session management setup.
 
-npm installs like mongoose, "bcrypt", "connect-mongo", "cookie-parser","dotenv":,"ejs", "express", "express-ejs-layouts", "express-session",  "jsonwebtoken", "method-override", "mongo-sanitize","mongodb", "mongoose",    "react-icons", "session", and "sort-by".
+You need:
+NodeJs
+Database (MongoDB) Free Cluster
+Create .env file
+Create a .env file to store your credentials. Example below:
+
+MONGODB_URI=mongodb+srv://<username>:<password>@clusterName.xxxxxxx.mongodb.net/blog
+JWT_SECRET=MySecretBlog
+Installation
+To install and run this project - install dependencies using npm and then start your server:
+
+$ npm install
+$ npm run dev
+
+Design Files
+The Blog layout is available in a Figma(.fig) file located under the "Design Files".
+

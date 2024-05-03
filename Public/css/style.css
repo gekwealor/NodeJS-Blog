@@ -326,6 +326,15 @@ img {
   padding: 15px;
 }
 
+.btn-get-started {
+  background-color: #3b0421;
+  color: #b59393;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 
 .pagination {
   font-size: 1.3rem;
