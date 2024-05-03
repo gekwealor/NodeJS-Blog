@@ -19,3 +19,8 @@ To install and run this project - I installed dependencies using npm and then st
 
 $ npm install
 $ npm run dev
+
+## Screenshots
+![WhatsApp Image 2024-05-03 at 12 26 42_e3228d3c](https://github.com/gekwealor/NodeJS-Blog/assets/128810536/24c82fed-077e-4ed6-ac7a-b517d43595f6)
+
+![WhatsApp Image 2024-05-03 at 12 26 42_9bf1ed8c](https://github.com/gekwealor/NodeJS-Blog/assets/128810536/b7d3dbab-45d2-4ae8-a628-61cd360b9f52)
