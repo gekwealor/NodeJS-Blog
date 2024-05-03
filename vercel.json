@@ -1,10 +1,10 @@
 {
     "routes": [
-      { "src": "/",
+      { "route": "/",
         "destination": "/" 
       },
       {
-        "src": "/test",
+        "route": "/test",
         "destination": "/"
       }
     ]
